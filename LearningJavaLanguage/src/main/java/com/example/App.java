@@ -5,46 +5,29 @@ import java.time.Month;
 
 public class App {
 	
-	public String texto = "Vivo en el plano de las instancias";
-	
 	public static void main(String[] args) {
 		
-		/* Creacion o instanciacion de objetos utilizando el patron Builder de Lombok
-		 * , que no fue creado por Lombok pero si lo han mejorado para su utilizacion.
-		 * 
-		 * El patron Builder es llamado un patron de diseño Factory, es decir, es un patron
-		 * de diseño creacional (para la creacion de objetos). 
-		 * 
-		 * ¿Que ventajas nos aporta?
-		 * 
-		 * Nos permite crear objetos aunque no tengamos el constructor explicitamente 
-		 * implementado, y ademas cuando vamos a crear un objeto el orden en que utilicemos
-		 * las propiedades o campos de la clase es indiferente */
+		// Ya es posible crear instancias de Empleado
+		Empleado empleado1 = new Empleado();
 		
-		Persona p1 = Persona.builder()
-				.salario(3500.25)
-				.nombre("Carolina")
-				.build();
+		empleado1.setNombre("Jeronimo");
 		
-		Persona persona2 = Persona.builder()
-				.nombre("Sebastian")
-				.primerApellido("Sanjuanelo")
-				.segundoApellido("Arrieta")
-				.genero(Genero.HOMBRE)
-				.fechaNacimiento(LocalDate.of(2000, Month.JANUARY, 20))
-				.salario(4500.25)
-				.build();
 		
-		System.out.println(persona2);
+		Empleado empleado2 = new Empleado(3500.45, Dpto.RRHH,
+				LocalDate.of(2000, Month.SEPTEMBER, 1));
 		
-		System.out.println("El pais de todas las personas es: " + Persona.PAIS);
+		System.out.println(empleado2.toString());
+		
+		/*
+		 * Crear un empleado que tenga todo lo de una Persona y ademas lo propio del 
+		 * empleado, teniendo en cuenta que los constructores no se heredan 
+		 * */
+		Empleado empleado3 = new Empleado("Juan", "Mtnez", "Lopez", 
+				Genero.HOMBRE, LocalDate.of(1980, Month.JANUARY, 20), 
+				5000, Dpto.FINANZAS, LocalDate.of(2000, Month.SEPTEMBER, 12));
+		
+		
+		System.out.println(empleado3);
 
-		// Mostrar el valor de la variable texto
-		
-	   // App app = new App();
-	   
-	   System.out.println(new App().texto);
-		
-		
 	}
 }

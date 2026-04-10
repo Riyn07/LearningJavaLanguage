@@ -5,6 +5,8 @@ import java.time.Month;
 
 public class App {
 	
+	public String texto = "Vivo en el plano de las instancias";
+	
 	public static void main(String[] args) {
 		
 		/* Creacion o instanciacion de objetos utilizando el patron Builder de Lombok
@@ -34,7 +36,15 @@ public class App {
 				.build();
 		
 		System.out.println(persona2);
+		
+		System.out.println("El pais de todas las personas es: " + Persona.PAIS);
 
+		// Mostrar el valor de la variable texto
+		
+	   // App app = new App();
+	   
+	   System.out.println(new App().texto);
+		
 		
 	}
 }

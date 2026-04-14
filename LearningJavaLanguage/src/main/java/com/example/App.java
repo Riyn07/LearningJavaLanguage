@@ -5,7 +5,7 @@ import java.time.Month;
 
 public class App {
 	
-	static final int TOTAL_ELEMENTOS = 10;
+	static final int TOTAL_ELEMENTOS = 100;
 
 	public static void main(String[] args) {
 
@@ -147,8 +147,7 @@ public class App {
 		
 		// Declaracion del array de 100 elementos
 		
-		int[] numerosEnteros = new int[TOTAL_ELEMENTOS];
-		
+		int[] numerosEnteros = new int [TOTAL_ELEMENTOS];
 		// Recorrer el array numerosEnteros y asignar a cada elemento un valor entre 1
 		// y 100
 		
@@ -179,13 +178,44 @@ public class App {
 			numerosEnteros[i] = i + 1;
 		}
 		
+		
+		System.out.println("------------ ARRAY ORIGINAL ------------");
+		
+		for ( int numeroEntero :numerosEnteros )
+			System.out.println(numeroEntero);
+		
+			/*
+			 *  UTILIZANDO UNA SENTENCIA "FOR" CLASICA RECORRER EL ARRAY NUMERO_ENTEROS 
+			 *  Y MOSTRAR SOLAMENTE LOS QUE SEAN PARES
+			 *  
+			 */ 
+			System.out.println("---------- Elementos que son par del Array original ----------");
+			
+			for (int i= 0; i <= TOTAL_ELEMENTOS -1; i++) {
+				if (numerosEnteros[i] % 2 == 0) {
+					//SI ENTRAMOS EN ESTE BLOQUE (LLAVE DE APERTURA Y LLAVE DE CIERE {}
+					//QUIERE DECIR QUE EL ELEMENTO DEL ARRAY NUMEROSENTEROS ES PAR
+					System.out.println(numerosEnteros[i]);
+				}
+					
+			}
+		
+			// EJERCICIOS SOBRE OPERADORES Y SENTENCIAS CONDICIONALES (IF,SWTICH CASE) Y
+			// SENTENCIAS DE CONTROL DE FLUJO (FOR,DO,WHILE,ETC)
+		
+			// EJERCICIO #3 
+			// 1 - COMMITEAR LOS CAMBIOS ACTUALES DEL PROYECTO LEARNINGJAVALANGUAGE.
+			// 2 - 
+			
+			
+		
 	}
 }
 
 
 
 
-
+	
 
 
 

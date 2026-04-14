@@ -4,6 +4,8 @@ import java.time.LocalDate;
 import java.time.Month;
 
 public class App {
+	
+	static final int TOTAL_ELEMENTOS = 10;
 
 	public static void main(String[] args) {
 
@@ -120,5 +122,74 @@ public class App {
 				.salario(3760.40)
 				.build() 
 			};
+		
+		/* OPERADORES */
+		
+		/* Operadores aritmeticos, que son: +, -, *, /, % 
+		 * 
+		 * De anteriores operadores vamos a ejemplificar, a continuacion, el
+		 * operador % (utilizado, entre otras cosas, para saber si un numero 
+		 * es para o no) 
+		 * 
+		 * Vamos a implementar una sentencia de control de flujo, que no existe en SQL
+		 * que es la sentencia for, que se utiliza para recorrer los elementos de un
+		 * array, porque se conoce a priori la contidad de elementos del erray 
+		 * 
+		 * Primero utilizaremos la sentencia for clasica y posteriormente la sentencia
+		 * for mejorado (mal llamado for each) */
+		
+		/* El Ejemplo, concretamente seria:
+		 * 
+		 * 1- Declarar un array de 100 elementos
+		 * 2- Agregarle valores al array 
+		 * 3- Recorrer el array y solamente mostrar los elementos que sean pares.
+		 * */
+		
+		// Declaracion del array de 100 elementos
+		
+		int[] numerosEnteros = new int[TOTAL_ELEMENTOS];
+		
+		// Recorrer el array numerosEnteros y asignar a cada elemento un valor entre 1
+		// y 100
+		
+//		for (int i = 0; i <= TOTAL_ELEMENTOS - 1; i = i + 1) {
+//			
+//			numerosEnteros[i] = i + 1;
+//		}
+		
+		/* La expresion i = i + 1 da lugar al operador de auto incremento
+		 * que seria i++ *
+		 * 
+		 * 
+		 * NOTA IMPORTANTE!!!
+		 * 
+		 * Cuando el operador de auto incremento (++) o tambien auto decremento (--)
+		 * esta solo en una sentencia da lo mismo que vaya delante de la variable o detras, 
+		 * es decir, ++i; es lo mismo que i++;
+		 * 
+		 * Pero, cuando el operador de auto incremento o auto decremento esta en una expresion
+		 * aqui si importa el orden, por ejemplo
+		 * 
+		 * ++i * 25; Primero incrementa el valor de la i y luego lo multiplica por 25
+		 * i-- * 25; Premero decrementa el valor de la i y luego la multiplica por 25
+		 * */
+		
+		for (int i = 0; i <= TOTAL_ELEMENTOS - 1; i++) {
+			
+			numerosEnteros[i] = i + 1;
+		}
+		
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
